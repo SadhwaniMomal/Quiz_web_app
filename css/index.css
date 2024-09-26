@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Ensure no overflow on the body and html */
+html, body {
+  height: 100%; /* Ensure the body and html cover full height */
+  overflow-x: hidden !important; /* Prevent scrolling */
+}
+
+body {
+  background-color: #1a1a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.entering-container {
+  border-radius: 30px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%; /* Make it responsive */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.entering-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: transparent;
+  background: linear-gradient(90deg, #5eead4, #6366f1);
+  -webkit-background-clip: text;
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  animation: logoAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes logoAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.form-control-custom {
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  width: 100%; /* Ensure the input field fills available width */
+}
+
+.form-control-custom:focus {
+  outline: none;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  border-color: #6366f1;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(90deg, #6366f1, #5eead4);
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%; /* Make button responsive */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-custom::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.btn-primary-custom:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(90deg, #5eead4, #6366f1);
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #5eead4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #6366f1;
+}
+
+.entering-link {
+  font-size: 1rem;
+  color: #5eead4;
+  margin-top: 20px;
+  display: block;
+}
+
+.entering-link a {
+  color: #5eead4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.entering-link a:hover {
+  color: #6366f1;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .entering-container {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto; /* Ensures it's centered on mobile */
+  }
+
+  .entering-logo {
+    font-size: 2.5rem;
+  }
+
+  .form-control-custom {
+    padding: 10px 40px; /* Adjust padding for mobile */
+  }
+
+  .btn-primary-custom {
+    font-size: 1rem;
+    padding: 10px 25px; /* Adjust button size for mobile */
+  }
+}
