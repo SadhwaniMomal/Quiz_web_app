@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-* , html{
+*{
     font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
@@ -15,9 +15,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
- 
-  overflow: hidden;
-  position: relative; /* Use relative to position child elements if needed */
   background-color: #1f1147;
 }
 
