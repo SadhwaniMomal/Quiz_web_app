@@ -1,5 +1,5 @@
- /* Container floating shapes */
- .year_container {
+
+.year_container {
     padding: 40px 20px;
     text-align: center;
     position: relative;
@@ -9,7 +9,6 @@
     transition: transform 0.6s ease-in-out;
     backface-visibility: hidden;
 }
-
 
 .btn-custom-years {
     width: 100%;
@@ -33,6 +32,7 @@
     transform: scale(1.05);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 /* Flip effect */
 .flip-container {
     perspective: 1000px;
@@ -41,4 +41,3 @@
 .flipped .year_container {
     transform: rotateY(180deg);
 }
-
