@@ -1,21 +1,26 @@
- // Function to navigate to a specific page with a slide-in animation
- function navigateToPage(page) {
-    // Apply slide-in effect before navigating
-    document.body.classList.add('slide-in');
-    setTimeout(function() {
-      window.location.href = page;
-    }, 500); // Delay to match the animation duration
-  }
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".category-card");
+  let delay = 0;
 
-  // Show each card one by one
-  document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.category-card');
-    let delay = 0;
-
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add('fade-in');
-      }, delay);
-      delay += 800; // Wait for the animation to finish before showing the next card
-    });
+  // Add fade-in animation to each card one by one
+  cards.forEach((card) => {
+    setTimeout(() => {
+      card.classList.add("fade-in");
+      card.style.opacity = 1;
+    }, delay);
+    delay += 800;
   });
+});
+
+// Function to navigate to a specific page with a slide animation
+function navigateToPage(page) {
+  // Get the body or a specific container to apply the slide-out class
+  const body = document.querySelector(".body-container");
+  body.classList.add("slide-out");
+
+  // Wait for the animation to finish before navigating
+  setTimeout(() => {
+    window.location.href = page; // Navigate to the new page
+  }, 500); // Match this duration to your animation duration
+}
