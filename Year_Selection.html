@@ -14,32 +14,33 @@
     <link rel="stylesheet" href="css/floating.css" />
     <link rel="stylesheet" href="css/year_selection.css" />
   </head>
-  <body class="position-fixed">
-    <div class="floating-circles"></div>
-    <div class="floating-circles"></div>
-    <!-- Flip container -->
-    <div class="flip-container">
-      <div class="container year_container">
-        <div class="checked-icon" id="checkIcon">
-          <i class="fas fa-check-circle"></i>
+  <body>
+    <div class="body-container w-100">
+      <div class="floating-circles"></div>
+      <div class="floating-circles"></div>
+      <!-- Flip container -->
+      <div class="flip-container">
+        <div class="container year_container">
+          <div class="checked-icon" id="checkIcon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <img
+            src="images/year-logo.png"
+            alt=""
+            class="img-fluid w-100 h-100"
+          />
+          <p class="fs-6 mx-3 text-white">
+            We provide more experience for playing games. Just be happy!
+          </p>
+          <button id="firstYearBtn" class="btn btn-custom-years">
+            First Year
+          </button>
+          <button id="secondYearBtn" class="btn btn-custom-years">
+            Second Year
+          </button>
         </div>
-        <img
-          src="images/year-selection-logo.png"
-          alt=""
-          class="img-fluid w-75 h-75"
-        />
-        <p class="fs-6 mx-3 text-white">
-          We provide more experience for playing games. Just be happy!
-        </p>
-        <button id="firstYearBtn" class="btn btn-custom btn-first-year">
-          First Year
-        </button>
-        <button id="secondYearBtn" class="btn btn-custom btn-second-year">
-          Second Year
-        </button>
       </div>
     </div>
-
     <!-- script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

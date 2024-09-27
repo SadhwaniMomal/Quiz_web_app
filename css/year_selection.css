@@ -10,7 +10,8 @@
     backface-visibility: hidden;
 }
 
-.btn-custom {
+
+.btn-custom-years {
     width: 100%;
     margin: 15px 0;
     border-radius: 25px;
@@ -18,17 +19,17 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.btn-first-year {
+#firstYearBtn {
     background-color: #00FF00;
     color: white;
 }
 
-.btn-second-year {
+#secondYearBtn {
     background-color: #6949FD;
     color: white;
 }
 
-.btn-custom:hover {
+.btn-custom-years:hover {
     transform: scale(1.05);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -41,12 +42,3 @@
     transform: rotateY(180deg);
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-    .container {
-        padding: 30px 15px;
-    }
-}
